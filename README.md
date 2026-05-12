@@ -1,5 +1,4 @@
 <p align="center">
-  <!-- Reemplaza esta línea con tu banner/logo una vez que tengas la imagen -->
   <!-- <img src="assets/banner.png" alt="SediFlow" width="720"/> -->
   <h1 align="center">SediFlow</h1>
   <p align="center">Aplicación científica de escritorio para análisis, imputación y modelamiento de series temporales de sedimentos e hidrología.</p>
@@ -36,11 +35,41 @@ SediFlow es una herramienta de escritorio diseñada para investigadores y profes
 
 ---
 
+## Capturas de pantalla
+
+<!-- Pantalla principal -->
+
+<p align="center">
+  <img src="assets/screenshots/main_window.png" alt="Ventana principal" width="700"/>
+  <br/><em>Ventana principal - carga y vista previa de datos</em>
+</p>
+
+
+<!-- EDA -->
+
+<p align="center">
+  <img src="assets/screenshots/EDA.png" alt="Análisis exploratorio" width="700"/>
+  <br/><em>Módulo de análisis exploratorio (EDA)</em>
+</p>
+
+
+<!-- Pronóstico -->
+<p align="center">
+  <img src="assets/screenshots/forecast1.png" alt="Pronóstico LSTM" width="700"/>
+  <br/><em>Entrenamiento del modelo LSTM</em>
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/forecast2.png" alt="Pronóstico LSTM" width="700"/>
+  <br/><em>Resultados del modelo LSTM</em>
+</p>
+
+
+---
+
 ## Instalación
 
-### Opción 1 — Paquete `.deb` (Ubuntu / Debian y derivados)
-
-**Requisitos previos:**
+**Requisitos del sistema:**
 ```
 Ubuntu 22.04 LTS o superior  /  Debian 12 o superior
 ```
@@ -68,25 +97,6 @@ sudo dpkg -r sediflow
 
 ---
 
-### Opción 2 — AppImage (cualquier distribución Linux)
-
-No requiere instalación. Funciona en cualquier distro Linux x86_64.
-
-```bash
-# Descargar el AppImage
-wget https://github.com/vosores/sediflow_release/releases/latest/download/SediFlow-0.1.0-x86_64.AppImage
-
-# Dar permisos de ejecución
-chmod +x SediFlow-0.1.0-x86_64.AppImage
-
-# Ejecutar
-./SediFlow-0.1.0-x86_64.AppImage
-```
-
-> Si tu distro no monta FUSE automáticamente, ejecuta con: `./SediFlow-*.AppImage --appimage-extract-and-run`
-
----
-
 ## Verificar integridad
 
 Cada release incluye un archivo `SHA256SUMS_0.1.0.txt` para verificar que los artefactos no fueron alterados:
@@ -98,7 +108,6 @@ sha256sum -c SHA256SUMS_0.1.0.txt
 Salida esperada:
 ```
 sediflow_0.1.0_amd64.deb: OK
-SediFlow-0.1.0-x86_64.AppImage: OK
 ```
 
 ---
@@ -129,13 +138,7 @@ sediflow
 
 **Error de display / pantalla negra**
 ```bash
-# Asegurarse de tener los drivers OpenGL
 sudo apt-get install libgl1 libegl1
-```
-
-**AppImage no ejecuta por FUSE**
-```bash
-./SediFlow-0.1.0-x86_64.AppImage --appimage-extract-and-run
 ```
 
 ---
